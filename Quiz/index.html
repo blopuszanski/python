@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome in quiz!</title>
+</head>
+<body>
+<form action="/result" method="post">
+{% for q in questions %}
+        <p> {{q.title}}  </p>
+        <select name="{{q.number}}">
+            <option value="yes">YES</option>
+            <option value="no">NO</option>
+        </select>
+        {% endfor %}
+        <br>
+        <input type="submit" value="Show Result">
+    </form>
+
+</body>
+</html>
