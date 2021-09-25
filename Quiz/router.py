@@ -24,7 +24,7 @@ def results():
     answers = request.form.items()
     points = 0
     for a in answers:
-        print('question number', a[0], 'answer', a[1])
+        print('question', a[0], 'answer', a[1])
         if a[1] == 'yes':
             is_true = True
         else:
@@ -65,5 +65,4 @@ def login():
         user = request.form['name']
         return redirect(url_for('return_answers', name = user))
     else:
-        user = request.args.get('name')
         return render_template('login_page.html')
