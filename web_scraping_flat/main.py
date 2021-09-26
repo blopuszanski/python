@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
 from requests import get
+import sqlite3
 
-URL = "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/mazowieckie/"
+URL = "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/mazowieckie/?search%5Bfilter_enum_rooms%5D%5B0%5D=one"
 
 def parse_price(price):
     return float(price.replace(' ', '').replace('zł', '').replace(',','.'))
@@ -15,5 +16,6 @@ for offer in bs.find_all('div', class_ = 'offer-wrapper'):
     location = footer.find('small', class_ = 'breadcrumb').get_text().strip().split(',')[0]
     title = offer.find('strong').get_text().strip()
     price = parse_price(offer.find('p', class_ = 'price').get_text().strip())
-
+    link = offer.find('a')
+    print(link['href'])
     print(location, title, price)
