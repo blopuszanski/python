@@ -1,3 +1,6 @@
+'''Program allows to get an information about flats prices and location from one of the most famous site with auctions in Poland.
+These information are redirected to the database'''
+
 from bs4 import BeautifulSoup
 from requests import get
 import sqlite3
