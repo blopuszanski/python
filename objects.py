@@ -1,3 +1,5 @@
+'Training with the objects'
+
 class sea_pet:
     def __init__(self, specie, size, swim):
         self.specie = specie

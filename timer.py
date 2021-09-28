@@ -1,3 +1,5 @@
+'Timer measured to countdown'
+
 import time
 print('This is timer')
 seconds = int(input('Please input seconds to countdown: '))

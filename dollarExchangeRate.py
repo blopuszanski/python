@@ -1,4 +1,4 @@
-'Program to import a dollar exchange rate at the date provided by the user'
+'Program to import a dollar exchange rate by API at the date provided by the user'
 
 import requests
 import pprint

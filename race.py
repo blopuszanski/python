@@ -1,3 +1,5 @@
+'Race simulation with using an objects'
+
 class vehicle:
     def __init__(self, vehicle_type, color, brand, velocity):
         self.vehicle_type = vehicle_type

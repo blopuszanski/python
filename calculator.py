@@ -1,4 +1,4 @@
-print('You are welcome in this module which is a simply calculate for numbers')
+'Simple calculate module'
 
 while True:
     try:
