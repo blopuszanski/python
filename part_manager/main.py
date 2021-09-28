@@ -27,9 +27,21 @@ retailer_entry.grid(row=1, column=1)
 #Price
 price_text = StringVar()
 price_label = Label(app, text='Price', font=('bold', 14))
-price_label.grid(row=0, column=0)
+price_label.grid(row=1, column=2)
 price_entry = Entry(app, textvariable=price_text)
-price_entry.grid(row=0, column=1)
+price_entry.grid(row=1, column=3)
+
+#Parts list (Listbox)
+parts_list = Listbox(app, height=8, width=50, border=0)
+parts_list.grid(row=3, column=0, columnspan=3, rowspan=6, pady=20, padx=20)
+
+#Create scrollbar
+scrollbar = Scrollbar(app)
+scrollbar.grid(row=3, column=3)
+
+#Set scrollbar to listbox
+parts_list.configure(yscrollcomman=scrollbar.set)
+scrollbar.configure(command=parts_list.yview)
 
 app.title('Part Manager')
 app.geometry('700x350')
